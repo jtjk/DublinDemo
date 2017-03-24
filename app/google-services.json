@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "667313940647",
+    "firebase_url": "https://tracker-162512.firebaseio.com",
+    "project_id": "tracker-162512",
+    "storage_bucket": "tracker-162512.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667313940647:android:9a13200f5f0fce90",
+        "android_client_info": {
+          "package_name": "jtjk.iki.fi.dublindemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667313940647-im7uqmcqqi6bttoje2nnv39fc7srqov4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn9ROQzkeHa6rfBLOerj_vxDwoYFL12AE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -25,6 +25,7 @@ public class MyHandler extends NotificationsHandler {
         sendNotification(nhMessage);
         if (MainActivity.isVisible) {
             MainActivity.mainActivity.ToastNotify(nhMessage);
+            Log.d("JANNE", nhMessage);
         }
     }
 

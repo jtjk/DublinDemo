@@ -6,9 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.util.Log;
-import android.webkit.CookieManager;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
@@ -22,18 +19,6 @@ public class MainActivity extends AppCompatActivity {
     private GoogleCloudMessaging gcm;
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
 
-    class MyWebViewClient extends WebViewClient {
-
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            if(!url.contains("dublinwebdemo.azurewebsites.net")){
-                return super.shouldOverrideUrlLoading(view, url);
-            } else {
-                view.loadUrl(url);
-                return true;
-            }
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,13 +29,6 @@ public class MainActivity extends AppCompatActivity {
         NotificationsManager.handleNotifications(this, NotificationSettings.SenderId, MyHandler.class);
         registerWithNotificationHubs();
 
-        WebView browser = (WebView) findViewById(R.id.webView);
-        CookieManager.getInstance().setAcceptCookie(true);
-        browser.getSettings().setJavaScriptEnabled(true);
-        browser.setWebViewClient(new MyWebViewClient());
-
-        browser.loadUrl("http://dublinwebdemo.azurewebsites.net/");
-        CookieManager.getInstance().setAcceptCookie(true);
     }
 
     @Override
